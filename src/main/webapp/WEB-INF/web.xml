@@ -9,4 +9,35 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
+  
+  <servlet>
+  <servlet-name>authentification</servlet-name>
+  <servlet-class>pack01.Authentification</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>authentification</servlet-name>
+  <url-pattern>/admin</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>servletadmin</servlet-name>
+  <servlet-class>pack01.ServletAdministrateur</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>servletadmin</servlet-name>
+  <url-pattern>/authen/pageadmin</url-pattern>
+  </servlet-mapping>
+ 
+  
+ <filter>
+ <filter-name>authen</filter-name>
+ <filter-class>pack01.F1</filter-class>
+ </filter>
+ 
+ <filter-mapping>
+ <filter-name>authen</filter-name>
+ <url-pattern>/authen/*</url-pattern>
+ </filter-mapping>
 </web-app>
