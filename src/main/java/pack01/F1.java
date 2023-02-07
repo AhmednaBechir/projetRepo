@@ -2,6 +2,7 @@ package pack01;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 
 import jakarta.servlet.Filter;
 import jakarta.servlet.FilterChain;
@@ -21,14 +22,17 @@ public class F1 implements Filter{
 	           // session retrieved, continue with servlet operations
 		String user= arg0.getParameter("login");
 		String pwd= arg0.getParameter("password");
-
-		Administrateur admin = new Administrateur();
-		String login= admin.getLogin();
-		String password = admin.getPassword();
-		if(user.equals(login) && pwd.equals(password)) {
-					arg2.doFilter(arg0, arg1);
-	}
-		else {
+		Map mappa=Resources.map;
+		for ( java.util.Iterator i = mappa.keySet().iterator(); i.hasNext();) {
+		String login = (String)i.next();
+		 String password = (String)mappa.get(login);
+			if(user.equals(login) && pwd.equals(password)) {
+				
+				arg2.doFilter(arg0, arg1);
+		}	
+		
+	
+		}
 			arg1.setContentType("text/html");
 		// récupère une référence vers le flux d'écriture
 		PrintWriter out = arg1.getWriter();
@@ -40,7 +44,8 @@ public class F1 implements Filter{
 				out.println("</head><BODY>");
 				out.println("<h1>Votre mot de passe n'est pas compatible avec votre login veuillez le resaisir</h1>");
 				out.println("</BODY></HTML>");
-		 }
+				out.close();
+		 
 	    	 //MySession.invalidate();
 	}
 

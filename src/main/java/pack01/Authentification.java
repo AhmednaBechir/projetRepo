@@ -12,11 +12,9 @@ import jakarta.servlet.http.HttpSession;
 
 public class Authentification extends HttpServlet{
 
-	public static Map<String,Administrateur> loginInfo = new HashMap<>();
 	
 		public void service(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
-			
+					
 			// positionne le type MIME pour la réponse
 		response.setContentType("text/html");
 		// récupère une référence vers le flux d'écriture

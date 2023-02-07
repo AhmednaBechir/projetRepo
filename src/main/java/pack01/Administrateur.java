@@ -2,9 +2,9 @@ package pack01;
 
 public class Administrateur {
 	
+	
 	private String login = "admin";
 	private String password = "admin";
-	
 	
 	
 	public String getLogin() {
