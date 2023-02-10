@@ -1,9 +1,12 @@
 package pack01;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Administrateur {
 	
-	
+	@JsonProperty
 	private String login = "admin";
+	@JsonProperty
 	private String password = "admin";
 	
 	

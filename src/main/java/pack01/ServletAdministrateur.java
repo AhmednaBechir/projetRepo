@@ -22,26 +22,20 @@ public class ServletAdministrateur extends HttpServlet{
 	// création de la page HTML
 	out.println("<HTML>");
 	out.println("<HEAD><TITLE>Administrateur</TITLE>");
-			out.println("<style>body {background-color : powderblue;}</style></HEAD>");
+	out.println("<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\r\n"
+			+ "	<style >"
+			+ "		body {"
+			+ "              background-color : powderblue;\r\n"
+			+ "              }"
+			+ "	</style>");
+			out.println("</HEAD>");
 	out.println("<BODY>");
-	out.println("<H1>Bienvenue Administrateur par default<br><br><br><br></H1>");
+	out.println("<H6>Bienvenue Administrateur par default<br></H6>");
 	
 	 
-	out.println("<H3>Vous pouvez changez votre mot de passe si vous voulez.<br>entrez vos informations encore pour changer votre mot de passe !</H3>");
-	out.println("<!DOCTYPE html>\r\n"
-			+ "<html>\r\n"
-			+ "<head>\r\n"
-			+ "	<title></title>\r\n"
-			+ "	<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\r\n"
-			+ "	<style >\r\n"
-			+ "		body {\r\n"
-			+ "              background-color : powderblue;\r\n"
-			+ "              }\r\n"
-			+ "	</style>\r\n"
-			+ "</head>\r\n"
-			+ "<body>\r\n"
-			+ "	\r\n"
-			+ "	<div class=\"container\">\r\n"
+	out.println("<H6>Vous pouvez changez votre mot de passe si vous voulez.<br>entrez vos informations encore pour changer votre mot de passe !</H6>");
+	out.println(
+			"	<div class=\"container\">\r\n"
 			+ "		<div class=\"row\">\r\n"
 			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/map/\">\r\n"
 			+ "				<div class=\"form-group\">\r\n"
@@ -63,10 +57,24 @@ public class ServletAdministrateur extends HttpServlet{
 			+ "			</form>\r\n"
 			+ "		</div>\r\n"
 			+ "	</div>\r\n"
-			+ "\r\n"
-			+ "</body>\r\n"
+			+ "\r\n");
+	out.println("<h6>Vous pouver ajouter une service de transfert d'argent</h6>"+
+			"	<div class=\"container\">\r\n"
+			+ "		<div class=\"row\">\r\n"
+			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/services/\">\r\n"
+			+ "				<div class=\"form-group\">\r\n"
+			+ "					<input type=\"text\" name=\"service\" class=\"form-control\">\r\n"
+			+ "				\r\n"
+			+ "				</div>\r\n"
+			+"<input type=\"submit\" value=\"Ajouter\" class=\"btn-success\">\r\n"
+			+ "			</form>\r\n"
+			+ "		</div>\r\n"
+			+ "	</div>\r\n"
+			+ "\r\n");
+	out.println( "</body>\r\n"
 			+ "</html>\r\n"
 			);
+	
 
 	out.close();
 	
