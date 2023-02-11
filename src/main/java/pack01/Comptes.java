@@ -39,5 +39,18 @@ public class Comptes {
 		this.service = service;
 	}
 	
+	public void Crediter(double solde) {
+		this.solde+=solde;
+	}
+	public boolean Retirer(double solde) {
+		if(this.solde>=solde)
+		{	
+		this.solde-=solde;
+		return true;
+		}
+		else
+			return false;
+	}
+	
 	
 }

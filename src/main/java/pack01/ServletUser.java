@@ -35,7 +35,7 @@ public class ServletUser extends HttpServlet{
 	out.println(
 			"	<div class=\"container\">\r\n"
 			+ "		<div class=\"row\">\r\n"
-			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/admins\">\r\n"
+			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/compte\">\r\n"
 			+ "				<div class=\"form-group\">\r\n"
 			+ "					<label>User Name : </label>\r\n"
 			+ "					<input type=\"text\" name=\"login\" class=\"form-control\">\r\n"
@@ -59,7 +59,7 @@ public class ServletUser extends HttpServlet{
 	out.println("<h6>Vous pouver transferer l'argent de votre compte a un autre compte<br>Entrez le numero de votre compte ,le numero de l'autre compte et le montant a transferer! </h6>"+
 			"	<div class=\"container\">\r\n"
 			+ "		<div class=\"row\">\r\n"
-			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/servicesTransf\">\r\n"
+			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/compte\">\r\n"
 			+ "					<input type=\"text\" name=\"CompteUser\" placeholder='Numero de votre compte'>\r\n"
 			+ "				\r\n"
 			+ "					<input type=\"text\" name=\"AutreCompte\" placeholder=\"Numero de l'autre compte\">\r\n"
@@ -72,7 +72,7 @@ public class ServletUser extends HttpServlet{
 			+ "		</div>\r\n"
 			+ "	</div>\r\n"
 			+ "\r\n");
-	out.println("<br><form method='get' action='http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/servicesTransf'><h6 >Saisir un montant pour le crediter en cash a un compte(Peut etre votre compte ou un autre compte) ! : </h6>");
+	out.println("<br><form method='get' action='http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/compte'><h6 >Saisir un montant pour le crediter en cash a un compte(Peut etre votre compte ou un autre compte) ! : </h6>");
 	out.println("<input type='number' placeholder='le montant'><input text='text' placeholder='le compte a crediter'>");
 	out.println("<input type='submit' value='Crediter' ></form>");
 	out.println( "</body>\r\n"
