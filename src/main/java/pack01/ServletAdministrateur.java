@@ -37,7 +37,7 @@ public class ServletAdministrateur extends HttpServlet{
 	out.println(
 			"	<div class=\"container\">\r\n"
 			+ "		<div class=\"row\">\r\n"
-			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/map/\">\r\n"
+			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/admins\">\r\n"
 			+ "				<div class=\"form-group\">\r\n"
 			+ "					<label>User Name : </label>\r\n"
 			+ "					<input type=\"text\" name=\"login\" class=\"form-control\">\r\n"
@@ -61,7 +61,7 @@ public class ServletAdministrateur extends HttpServlet{
 	out.println("<h6>Vous pouver ajouter une service de transfert d'argent</h6>"+
 			"	<div class=\"container\">\r\n"
 			+ "		<div class=\"row\">\r\n"
-			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/services/\">\r\n"
+			+ "			<form method=\"get\" action=\"http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/servicesTransf\">\r\n"
 			+ "				<div class=\"form-group\">\r\n"
 			+ "					<input type=\"text\" name=\"service\" class=\"form-control\">\r\n"
 			+ "				\r\n"
@@ -71,6 +71,17 @@ public class ServletAdministrateur extends HttpServlet{
 			+ "		</div>\r\n"
 			+ "	</div>\r\n"
 			+ "\r\n");
+	out.println("<form method='get' action='http://localhost:8080/ProjetServicesDeTransfert/ws/wservices/servicesTransf'><label for=\"servTransf\">Chooisir une service de transfert pour la retirer : </label>");
+	out.println("<select name=\"servTransf\" >");
+
+	String servicesNames="";		
+	for ( java.util.Iterator i = Resources.services.keySet().iterator(); i.hasNext();) 
+	{
+			servicesNames= Resources.services.get(i.next()).getName();
+			out.println("<option value='"+servicesNames+"'>"+servicesNames+"</option>");
+			
+	}
+	out.println("</select>    <input type='submit' value='Retirer' ></form>");
 	out.println( "</body>\r\n"
 			+ "</html>\r\n"
 			);

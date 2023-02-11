@@ -22,10 +22,10 @@ public class F1 implements Filter{
 	           // session retrieved, continue with servlet operations
 		String user= arg0.getParameter("login");
 		String pwd= arg0.getParameter("password");
-		Map mappa=Resources.map;
-		for ( java.util.Iterator i = mappa.keySet().iterator(); i.hasNext();) {
+		
+		for ( java.util.Iterator i = Resources.admins.keySet().iterator(); i.hasNext();) {
 		String login = (String)i.next();
-		 String password = (String)mappa.get(login);
+		 String password = (String)Resources.admins.get(login);
 			if(user.equals(login) && pwd.equals(password)) {
 				
 				arg2.doFilter(arg0, arg1);
