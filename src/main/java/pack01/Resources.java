@@ -74,6 +74,6 @@ public static Map<Integer,Service> services = new HashMap<>();
 	@Path("/compte")
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void setComptes(Comptes compte) {
-		comptes.put(compte.getNumCompte(), compte);
+		comptes.put(compte.getLogin(), compte);
 	}
 }

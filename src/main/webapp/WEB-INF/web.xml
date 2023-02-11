@@ -21,6 +21,26 @@
   </servlet-mapping>
   
   <servlet>
+  <servlet-name>user</servlet-name>
+  <servlet-class>pack01.User</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>user</servlet-name>
+  <url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <servlet-name>servletuser</servlet-name>
+  <servlet-class>pack01.ServletUser</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>servletuser</servlet-name>
+  <url-pattern>/authent/pageuser</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
   <servlet-name>servletadmin</servlet-name>
   <servlet-class>pack01.ServletAdministrateur</servlet-class>
   </servlet>
@@ -39,6 +59,16 @@
  <filter-mapping>
  <filter-name>authen</filter-name>
  <url-pattern>/authen/*</url-pattern>
+ </filter-mapping>
+ 
+  <filter>
+ <filter-name>authent</filter-name>
+ <filter-class>pack01.F2</filter-class>
+ </filter>
+ 
+ <filter-mapping>
+ <filter-name>authent</filter-name>
+ <url-pattern>/authent/*</url-pattern>
  </filter-mapping>
  
  <servlet>
