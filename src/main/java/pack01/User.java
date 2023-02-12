@@ -56,7 +56,7 @@ public class User extends HttpServlet{
 			+ "\r\n");
 			out.println("<br><br><h3>OU creer un compte</h3>");
 			out.println(
-					"			<form method=\"post\" action=\"/ProjetServicesDeTransfert/authen/pageadmin\">\r\n"
+					"			<form method=\"post\" action=\"\">\r\n"
 					+ "					<label>User Name : </label>\r\n"
 					+ "					<input type=\"text\" name=\"login\" >\r\n"
 					+ "				\r\n"

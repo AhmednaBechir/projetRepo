@@ -84,8 +84,16 @@ public static Map<Integer,Service> services = new HashMap<>();
 	@Consumes(MediaType.APPLICATION_JSON)
 	public void Crediter(Comptes compteC) {
 		compteC.Crediter(5000);
-	//	compteR.Retirer(5000);
 		comptes.put(compteC.getLogin(),compteC);
-	//	comptes.put(compteR.getNumCompte(),compteR);
 	}
+	
+	@PUT
+	@Path("/retirer")
+	@Consumes(MediaType.APPLICATION_JSON)
+	public void Retirer(Comptes compteR ){
+		compteR.Retirer(5000);
+		comptes.put(compteR.getLogin(),compteR);
+		
+	}
+	
 }
