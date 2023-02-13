@@ -53,7 +53,8 @@ public static Map<Integer,Service> services = new HashMap<>();
 	public void setService(Service service) {
 		services.put(service.getIdService(),service);
 	}
-	
+
+
 	@DELETE
 	@Path("/servicesTransf")
 	@Consumes(MediaType.APPLICATION_JSON)
@@ -96,4 +97,34 @@ public static Map<Integer,Service> services = new HashMap<>();
 		
 	}
 	
+	
+	
+	public static Map<Integer,Responsable> responsables = new HashMap<>();
+	
+	@GET
+	@Path("/responsable")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Map getResponsable() {
+		return responsables;
+	}
+
+	@PUT
+	@Path("/responsable")
+	@Produces(MediaType.APPLICATION_JSON)
+	public void setResponsable(Responsable responsable) {
+		responsables.put(responsable.getId(),responsable );
+	}
+	@DELETE
+	@Path("/responsable")
+	@Produces(MediaType.APPLICATION_JSON)
+	public void REMOVEResponsable(Responsable responsable) {
+		responsables.remove(responsable.getId());
+	}
+	
+	@GET
+	@Path("/affectation")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Map getAffectation() {
+		return services;
+	}
 }
